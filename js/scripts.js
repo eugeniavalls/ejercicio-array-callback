@@ -22,6 +22,6 @@ const result = words.map(word => {
 	return word.toUpperCase();
 });
 
-console.log(result); // [ ‘A’, ‘B’, ‘C’, ‘D’ ]
+console.log(result); 
 
     
