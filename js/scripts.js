@@ -146,9 +146,7 @@ initialLetterArray(['hola', 'adios', 'gato', 'perro', 'casa']);
 // Crea una función que reciba un array de 10 números y te diga si alguno es mayor de 5.
 
 const tenNumbers = numbers => {
-  const finalResult = numbers.some(number => {
-    return number > 5;
-  });
+  const finalResult = numbers.some(number => number > 5);
 
   console.log(finalResult);
 };
@@ -157,9 +155,7 @@ tenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 // Crea una función que reciba un array de 5 palabras y un número y te devuelva un array con las palabras que tienen esa longitud, por ejemplo si le envias (['hola', 'adios', 'gato', 'perro', 'casa'], 4), te devolverá un array con ['hola', 'gato', 'casa']
 
 const wordsNumberLength = (words, number) => {
-  const finalResult = words.filter(word => {
-    return word.length === number;
-  });
+  const finalResult = words.filter(word => word.length === number);
 
   console.log(finalResult);
 };
@@ -169,9 +165,7 @@ wordsNumberLength(['hola', 'adios', 'gato', 'perro', 'casa'], 4);
 // Crea una función que reciba un array de nombres y te devuelva un array con los nombres que empiecen por 'A'
 
 const namesA = names => {
-  const finalResult = names.filter(name => {
-    return name.toLowerCase().startsWith('a');
-  });
+  const finalResult = names.filter(name => name.toLowerCase().startsWith('a'));
 
   console.log(finalResult);
 };
@@ -185,9 +179,7 @@ const users = [
 ];
 
 const ageNumber = array => {
-  const finalResult = array.filter(user => {
-    return user.age < 30;
-  });
+  const finalResult = array.filter(user => user.age < 30);
 
   console.log(finalResult);
 };
@@ -196,11 +188,53 @@ ageNumber(users);
 // Crea una función que reciba un array relleno con números pares y te diga si todos son pares o no
 
 const pairNumbers = numbers => {
-  const finalResult = numbers.every(number => {
-    return number % 2 === 0;
-  });
+  const finalResult = numbers.every(number => number % 2 === 0);
 
   console.log(finalResult);
 };
 
 pairNumbers([2, 4, 6, 8, 10, 12]);
+
+// Crea una función que reciba un array de números desordenados y los muestre por consola ordenados de mayor a menor.
+
+const jumbledNumbers = numbers => {
+  const finalResult = numbers.sort((a, b) => a - b);
+
+  console.log(finalResult);
+};
+
+jumbledNumbers([1, 7, 3, 8, 9, 12, 4]);
+
+// Repite el ejercicio anterior pero con los números de menor a mayor.
+
+const jumbledNumbers2 = numbers => {
+  const finalResult = numbers.sort((a, b) => b - a);
+  console.log(finalResult);
+};
+jumbledNumbers2([1, 7, 3, 8, 9, 12, 4]);
+
+// Crea una función que reciba un array de 5 palabras y las ordene alfabéticamente.
+
+const wordsOrder = words => {
+  const finalResult = words.sort((a, b) => {
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+
+  console.log(finalResult);
+};
+wordsOrder(['arbol', 'balón', 'diana', 'césped']);
+
+// Crea una función que reciba un array de 5 palabras y las ordene alfabeticamente de forma inversa.
+
+const wordsOrder2 = words => {
+  const finalResult = words.sort((a, b) => {
+    if (a > b) return -1;
+    if (a < b) return 11;
+    return 0;
+  });
+
+  console.log(finalResult);
+};
+wordsOrder2(['arbol', 'balón', 'diana', 'césped']);
