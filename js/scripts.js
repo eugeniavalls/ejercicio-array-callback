@@ -144,3 +144,63 @@ const initialLetterArray = words => {
 initialLetterArray(['hola', 'adios', 'gato', 'perro', 'casa']);
 
 // Crea una función que reciba un array de 10 números y te diga si alguno es mayor de 5.
+
+const tenNumbers = numbers => {
+  const finalResult = numbers.some(number => {
+    return number > 5;
+  });
+
+  console.log(finalResult);
+};
+tenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+// Crea una función que reciba un array de 5 palabras y un número y te devuelva un array con las palabras que tienen esa longitud, por ejemplo si le envias (['hola', 'adios', 'gato', 'perro', 'casa'], 4), te devolverá un array con ['hola', 'gato', 'casa']
+
+const wordsNumberLength = (words, number) => {
+  const finalResult = words.filter(word => {
+    return word.length === number;
+  });
+
+  console.log(finalResult);
+};
+
+wordsNumberLength(['hola', 'adios', 'gato', 'perro', 'casa'], 4);
+
+// Crea una función que reciba un array de nombres y te devuelva un array con los nombres que empiecen por 'A'
+
+const namesA = names => {
+  const finalResult = names.filter(name => {
+    return name.toLowerCase().startsWith('a');
+  });
+
+  console.log(finalResult);
+};
+namesA(['Ana', 'Olga', 'Alberto', 'Eugenia', 'Alicia']);
+
+// Crea una función que reciba un array similar a este y te devuelva sólo los usuarios cuya edad sea menor de 30
+const users = [
+  { name: 'John', age: 25 },
+  { name: 'Jane', age: 30 },
+  { name: 'Bob', age: 20 }
+];
+
+const ageNumber = array => {
+  const finalResult = array.filter(user => {
+    return user.age < 30;
+  });
+
+  console.log(finalResult);
+};
+ageNumber(users);
+
+// Crea una función que reciba un array relleno con números pares y te diga si todos son pares o no
+
+const pairNumbers = numbers => {
+  const finalResult = numbers.every(number => {
+    return number % 2 === 0;
+  });
+
+  console.log(finalResult);
+};
+
+pairNumbers([2, 4, 6, 8, 10, 12]);
